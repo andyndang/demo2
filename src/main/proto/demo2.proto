@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example";
+option java_outer_classname = "Demo2";
+option objc_class_prefix = "HLW";
+
+package com.example;
+
+service Demo2Service {
+  rpc send (Demo2Request) returns (Demo2Reply) {}
+}
+
+message Demo2Request {
+  string name = 1;
+}
+
+message Demo2Reply {
+  string message = 1;
+}
